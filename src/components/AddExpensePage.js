@@ -4,11 +4,13 @@ import ExpenseForm from './ExpenseForm';
 import { addExpense } from '../actions/expenses';
 
 export class AddExpensePage extends React.Component {
+
   onSubmit = (expense) => {
     this.props.addExpense(expense);
     this.props.history.push('/');
   };
   render() {
+    console.log('properties on add expense',this.props);
     return (
       <div>
         <h1>Add Expense</h1>
